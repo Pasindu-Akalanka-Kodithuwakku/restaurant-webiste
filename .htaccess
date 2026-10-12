@@ -1,0 +1,36 @@
+RewriteEngine On
+# Clean URL
+# -CASHIER
+RewriteRule ^cashier$ /staff/cashier.php [NC,L]
+# -BAR SECTION
+RewriteRule ^bar$ /staff/bar_section.php [NC,L]
+# -KITCHEN SECTION
+RewriteRule ^kitchen$ /staff/kitchen_section.php [NC,L]
+# -ADD LOBBY USERS
+RewriteRule ^lobby$ /staff/lobby_users.php [NC,L]
+# -ADD MENU ITEMS
+RewriteRule ^addMenu/showKitchen$ /staff/add_menu_items.php?menu_section=kitchen [NC,L]
+RewriteRule ^addMenu/showBar$ /staff/add_menu_items.php?menu_section=bar [NC,L]
+RewriteRule ^addMenu$ /staff/add_menu_items.php [NC,L]
+# -ADD RESTAURANT TABLES
+RewriteRule ^addTable/showKitchen$ /staff/add_restaurant_tables.php?table_section=kitchen [NC,L]
+RewriteRule ^addTable/showBar$ /staff/add_restaurant_tables.php?table_section=bar [NC,L]
+RewriteRule ^addTable$ /staff/add_restaurant_tables.php [NC,L]
+#CHECK LOGIN DEVICE
+RewriteRule ^sysinfo$ /staff/manage_authorization.php [NC,L]
+# -SCAN QR
+RewriteRule ^welcome$ /cus/scan_qr.php [NC,L]
+RewriteRule ^([\w-]+)$ /cus/scan_qr.php?table_number=$1 [NC,L]
+# -LOAD MAIN INDEX PAGE
+RewriteRule ^$ /main/load.php [NC,L]
+# Disabling Directory Browse
+Options -Indexes
+Options -MultiViews
+# Custom Error Page
+ErrorDocument 403 /errors/403.php
+ErrorDocument 404 /errors/404.php
+# Files Upload Settings
+php_value upload_max_filesize 128M
+php_value post_max_size 128M
+php_value max_execution_time 300
+php_value max_input_time 300

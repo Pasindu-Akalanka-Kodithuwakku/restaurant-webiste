@@ -1,0 +1,224 @@
+/* ==========================================
+   Manage Menu Items Page - Additional Styles
+   ========================================== */
+
+/* Main Content Padding & Alignment */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: 2px solid #e74c3c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+legend {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 18px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels & Inputs Layout */
+fieldset label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+fieldset input[type="text"],
+fieldset input[type="file"],
+fieldset select,
+fieldset textarea {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fdfdfd;
+    width: 100%;
+}
+
+fieldset input:focus,
+fieldset select:focus,
+fieldset textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+fieldset textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Form Action Buttons Container */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.form-actions button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #219150;
+    transform: translateY(-1px);
+}
+
+.form-actions button[type="reset"] {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.form-actions button[type="reset"]:hover {
+    background-color: #6c7a89;
+}
+
+/* Update Section Top Buttons (Show Kitchen / Bar & Update Changes) */
+fieldset a button,
+fieldset > button[name="update_records"] {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    transition: background 0.3s ease;
+}
+
+fieldset a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+fieldset a button {
+    background-color: #3498db;
+    color: white;
+}
+
+fieldset a button:hover {
+    background-color: #2980b9;
+}
+
+fieldset > button[name="update_records"] {
+    background-color: #e67e22;
+    color: white;
+}
+
+fieldset > button[name="update_records"]:hover {
+    background-color: #d35400;
+}
+
+/* Manage Menu Table Adjustments */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    min-width: 1300px;
+}
+
+.table-container th, 
+.table-container td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+    vertical-align: middle;
+}
+
+.table-container th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Table Inputs & Elements Styling */
+.table-container input[type="text"],
+.table-container input[type="number"],
+.table-container input[type="datetime-local"],
+.table-container select,
+.table-container textarea {
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    min-width: max-content;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+.table-container textarea {
+    min-height: 40px;
+}
+
+.table-container img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto 5px auto;
+    border: 1px solid #ddd;
+}
+
+.table-container input[type="file"] {
+    font-size: 0.75rem;
+    width: 130px;
+}
+
+/* ==========================================
+   Responsive Media Queries (Mobile & Tablet)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    fieldset {
+        padding: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+}
