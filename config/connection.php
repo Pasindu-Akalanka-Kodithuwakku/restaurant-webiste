@@ -1,8 +1,8 @@
 <?php
     // Setup PDO Connection
     try {
-        $dsn = 'mysql:host=localhost;dbname=lavorhub_restaurant_db';
-        $username = 'root';
+        $dsn = 'mysql:host=;dbname=';
+        $username = '';
         $password = '';
     
         // Create a new PDO instance
